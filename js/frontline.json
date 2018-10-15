@@ -1,184 +1,213 @@
-[
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0759028,
-        14.6394557
-      ]
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+          "name": "GCF Ortigas",
+          "type": "church",
+          "popupContent": "This is where the Rockies play!"
+      },
+      "geometry": {
+          "type": "Point",
+          "coordinates": [121.0611, 14.5886]
+      }
     },
-    "properties": {
-      "name": "Ateneo de Manila University",
-      "color": "#0000FF"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0663401,
-        14.6538519
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0759028,
+          14.6394557
+        ]
+      },
+      "properties": {
+        "name": "Ateneo de Manila University",
+        "type": "school",
+        "popupContent": "ADMU",
+        "color": "#0000FF"
+      }
     },
-    "properties": {
-      "name": "UP Diliman",
-      "color": "#800000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        120.9844258,
-        14.5758311
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0663401,
+          14.6538519
+        ]
+      },
+      "properties": {
+        "name": "UP Diliman",
+        "type": "school",
+        "color": "#800000"
+      }
     },
-    "properties": {
-      "name": "UP Manila",
-      "color": "#800000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        120.990946,
-        14.5648042
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9844258,
+          14.5758311
+        ]
+      },
+      "properties": {
+        "name": "UP Manila",
+        "type": "school",
+        "color": "#800000"
+      }
     },
-    "properties": {
-      "name": "De La Salle University - Manila",
-      "color": "#008000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        120.9876451,
-        14.6095184
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.990946,
+          14.5648042
+        ]
+      },
+      "properties": {
+        "name": "De La Salle University - Manila",
+        "type": "school",
+        "color": "#008000"
+      }
     },
-    "properties": {
-      "name": "University of Santo Tomas",
-      "color": "#FFFF00"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0586713,
-        14.5803802
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9876451,
+          14.6095184
+        ]
+      },
+      "properties": {
+        "name": "University of Santo Tomas",
+        "type": "school",
+        "color": "#FFFF00"
+      }
     },
-    "properties": {
-      "name": "University Asia & Pacific",
-      "color": "#FF0000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0550089,
-        14.5935978
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0586713,
+          14.5803802
+        ]
+      },
+      "properties": {
+        "name": "University Asia & Pacific",
+        "type": "school",
+        "color": "#FF0000"
+      }
     },
-    "properties": {
-      "name": "Messiah College",
-      "color": "#FF0000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0536943,
-        14.5641002
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0550089,
+          14.5935978
+        ]
+      },
+      "properties": {
+        "name": "Messiah College",
+        "type": "school",
+        "color": "#FF0000"
+      }
     },
-    "properties": {
-      "name": "University of Makati",
-      "color": "#0000FF"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.075366,
-        14.642955
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0536943,
+          14.5641002
+        ]
+      },
+      "properties": {
+        "name": "University of Makati",
+        "type": "school",
+        "color": "#0000FF"
+      }
     },
-    "properties": {
-      "name": "Miriam College",
-      "color": "#0000FF"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        120.9999714,
-        14.5993127
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.075366,
+          14.642955
+        ]
+      },
+      "properties": {
+        "name": "Miriam College",
+        "type": "school",
+        "color": "#0000FF"
+      }
     },
-    "properties": {
-      "name": "Earist College",
-      "color": "#800000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0085669,
-        14.5979344
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9999714,
+          14.5993127
+        ]
+      },
+      "properties": {
+        "name": "Earist College",
+        "type": "school",
+        "color": "#800000"
+      }
     },
-    "properties": {
-      "name": "Polytechnic University of the Philippines",
-      "color": "#800000"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        121.0403022,
-        14.6180502
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0085669,
+          14.5979344
+        ]
+      },
+      "properties": {
+        "name": "Polytechnic University of the Philippines",
+        "type": "school",
+        "color": "#800000"
+      }
     },
-    "properties": {
-      "name": "Kalayaan College",
-      "color": "#0000FF"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-        120.983603,
-        14.6033972
-      ]
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0403022,
+          14.6180502
+        ]
+      },
+      "properties": {
+        "name": "Kalayaan College",
+        "type": "school",
+        "color": "#0000FF"
+      }
     },
-    "properties": {
-      "name": "Far Eastern University Manila",
-      "color": "#008000"
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.983603,
+          14.6033972
+        ]
+      },
+      "properties": {
+        "name": "Far Eastern University Manila",
+        "type": "school",
+        "color": "#008000"
+      }
     }
-  }
-]
+  ]
+}

@@ -1,80 +1,29 @@
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zaHVhZ2FkIiwiYSI6ImNpaG4wYXd2ODBvb3F0dGx6dTZmeGVlZXQifQ.Kkp19uppZO2snbCqQqkT5A';
 
-// initialize the map
-var map = L.map('map').setView([14.59, 121.06], 13);
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/joshuagad/cjn766fuo1rqw2snbl2ynogpw',
+    center: [121.02, 14.61],
+    zoom: 12
+});
 
-// load a tile layer
-
-L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png',
-    {
-        attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-        maxZoom: 17,
-        minZoom: 9
-    }).addTo(map);
-
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "GCF Ortigas",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [121.0611, 14.5886]
-    }
-};
-
-
-L.geoJSON(geojsonFeature).addTo(map);
-
-var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "#ff7800",
-    color: "#FF0000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
-
-function onEachFeature(feature, layer) {
-    // does this feature have a property named popupContent?
-    console.log(feature.properties);
-    console.log(layer);
-    if (feature.properties && feature.properties.popupContent) {
-        console.log("found popup");
-        layer.bindPopup(feature.properties.popupContent);
-    }
-}
-
-var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-104.99404, 39.75621]
-    }
-};
-
-L.geoJSON(geojsonFeature, {
-    onEachFeature: onEachFeature
-}).addTo(map);
-
-$.getJSON("js/frontline.json", {}, function (data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data, {
-        pointToLayer: function (feature, latlng) {
-            console.log(feature);
-            return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: feature.properties.color,
-                color: feature.properties.color,
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8
-            });
-        }
-    }).addTo(map);
+map.on('load', function() {
+    $.getJSON("./js/frontline.json", {}, function(data) {
+        data.features.forEach(function(marker) {
+            var el = document.createElement('div');
+            el.className = 'marker';
+            if (marker.properties.type=="school") {
+                el.style.color = marker.properties.color;
+                el.style.fontSize = "1.2rem";
+                el.innerHTML = '<i class="fas fa-school"></i>';
+            }
+            else if (marker.properties.type=="church") {
+                el.style.fontSize = "1.5rem";
+                el.innerHTML = '<i class="fas fa-church"></i>';
+            }
+            new mapboxgl.Marker(el)
+              .setLngLat(marker.geometry.coordinates)
+              .addTo(map);
+        });
+    });
 });
