@@ -5,8 +5,7 @@
       "type": "Feature",
       "properties": {
           "name": "GCF Ortigas",
-          "type": "church",
-          "popupContent": "This is where the Rockies play!"
+          "type": "church"
       },
       "geometry": {
           "type": "Point",
@@ -18,7 +17,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          121.0759028,
+          121.0766,
+          14.644955
+        ]
+      },
+      "properties": {
+        "name": "Miriam College",
+        "type": "school",
+        "color": "#0000FF"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0781,
           14.6394557
         ]
       },
@@ -79,7 +93,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          120.9876451,
+          120.9896451,
           14.6095184
         ]
       },
@@ -94,12 +108,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          121.0586713,
+          121.0606713,
           14.5803802
         ]
       },
       "properties": {
-        "name": "University Asia & Pacific",
+        "name": "University of Asia and the Pacific",
         "type": "school",
         "color": "#FF0000"
       }
@@ -109,7 +123,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          121.0550089,
+          121.0572589,
           14.5935978
         ]
       },
@@ -124,7 +138,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          121.0536943,
+          121.0559,
           14.5641002
         ]
       },
@@ -139,22 +153,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          121.075366,
-          14.642955
-        ]
-      },
-      "properties": {
-        "name": "Miriam College",
-        "type": "school",
-        "color": "#0000FF"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.9999714,
+          121.001014,
           14.5993127
         ]
       },
@@ -199,8 +198,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          120.983603,
-          14.6033972
+          120.986703,
+          14.6038972
         ]
       },
       "properties": {

@@ -8,22 +8,49 @@ const map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-    $.getJSON("./js/frontline.json", {}, function(data) {
-        data.features.forEach(function(marker) {
-            var el = document.createElement('div');
-            el.className = 'marker';
-            if (marker.properties.type=="school") {
-                el.style.color = marker.properties.color;
-                el.style.fontSize = "1.2rem";
-                el.innerHTML = '<i class="fas fa-school"></i>';
-            }
-            else if (marker.properties.type=="church") {
-                el.style.fontSize = "1.5rem";
-                el.innerHTML = '<i class="fas fa-church"></i>';
-            }
-            new mapboxgl.Marker(el)
-              .setLngLat(marker.geometry.coordinates)
-              .addTo(map);
+    $.getJSON("./js/school-areas.json", {}, function(data) {
+        data.features.forEach(function(school) {
+            map.addLayer({
+                'id': school.properties.id + '-line',
+                'type': 'line',
+                'source': {
+                    'type': 'geojson',
+                    'data': school
+                },
+                'paint': {
+                    'line-color': school.properties.color,
+                    'line-width': 3
+                }
+            });
+            map.addLayer({
+                'id': school.properties.id + '-fill',
+                'type': 'fill',
+                'source': {
+                    'type': 'geojson',
+                    'data': school
+                },
+                'paint': {
+                    'fill-color': school.properties.color,
+                    'fill-opacity': 0.3
+                }
+            });
+
+            var popup = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            });
+            map.on('mouseenter', school.properties.id + '-fill', function(e) {
+                map.getCanvas().style.cursor = 'pointer';
+                var coordinates = e.features[0].properties.center;
+                var description = e.features[0].properties.name;
+                popup.setHTML(description)
+                     .setLngLat(e.lngLat)
+                     .addTo(map);
+            });
+            map.on('mouseleave', school.properties.id + '-fill', function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+            });
         });
     });
 });
